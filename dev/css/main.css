@@ -162,10 +162,9 @@ body {
 }
 
 .cat {
-  flex-grow: 2;
+  flex-grow: 1;
 }
 
 .dt {
-  flex-grow: 1;
-  text-align: center;
+  margin: auto;
 }
