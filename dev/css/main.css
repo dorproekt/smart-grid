@@ -141,30 +141,31 @@ body {
   font-family: Verdana, Arial;
 }
 
-.article {
-  max-width: 600px;
-  padding: 5px;
-  margin: 20px auto;
-  border: 1px solid black;
-  border-radius: 10px;
+img {
+  max-width: 100%;
 }
 
-.meta {
-  background: #ddd;
-  padding: 5px 0;
+section.profit {
+  background: #232324;
+  padding: 15px 0;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 5px;
   overflow: hidden;
-  font-size: 20px;
-}
-
-.article {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.cat {
-  flex-grow: 1;
-}
-
-.dt {
-  margin: auto;
+.wrap .item {
+  border: 1px solid #fff;
+  text-align: center;
+  background: #fff;
+  margin: 5px;
+  max-width: 30%;
+  min-width: 150px;
 }
