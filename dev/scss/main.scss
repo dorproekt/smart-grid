@@ -4,28 +4,31 @@ body {
     font-family: Verdana, Arial;
 }
 
-h1 {
-    text-align: center;
-    font-size: 32px;
+.article {
+	max-width: 600px;
+	padding: 5px;
+	margin: 20px auto;
+	border: 1px solid black;
+	border-radius: 10px;
 }
 
-.container {
+.meta {
+	background: #ddd;
+	padding: 5px 0;
+	overflow: hidden;
+	font-size: 20px;
+}
+
+.article {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    background-color: orange;
-    justify-content: space-between;
-    align-items: stretch;
-    
-    .item {
-        margin: 15px;
-        width: 150px;
-        background-color: bisque;
-        border: solid 2px #fff;
-        text-align: center;
-    }
-    
-    .item-4 {
-        align-self: flex-end;
-    }
+}
+
+.cat {
+    flex-grow: 2;
+}
+
+.dt {
+    flex-grow: 1;
+    text-align: center;
 }
