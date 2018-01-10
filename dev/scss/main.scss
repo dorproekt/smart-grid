@@ -13,7 +13,7 @@ section.profit {
 	padding: 15px 0;
 }
 
-.wrap {
+.wrap{
 	max-width: 960px;
 	margin: 0 auto;
 	height: 100%;
@@ -27,8 +27,27 @@ section.profit {
         border: 1px solid #fff;
         text-align: center;
         background: #fff;
-        margin: 5px;
-        max-width: 30%;
-        min-width: 150px;
+        flex-basis: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media screen and (max-width: 813px) {
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+        
+        .img {
+            margin: 0 10px 0 0;
+            width: 100px;
+            flex-grow: 1;
+        }
+        
+        .text {
+            text-align: left;
+            font-style: italic;
+            width: 290px;
+            flex-grow: 1;
+        }
     }
 }
