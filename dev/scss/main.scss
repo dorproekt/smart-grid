@@ -19,35 +19,59 @@ section.profit {
 	height: 100%;
 	padding: 0 5px;
 	overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     
-    .item {
-        border: 1px solid #fff;
-        text-align: center;
-        background: #fff;
-        flex-basis: 400px;
+    .items {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        @media screen and (max-width: 813px) {
-            &:nth-child(even) {
-                flex-direction: row-reverse;
+        
+        .item {
+            flex-basis: 200px;
+            background-color: cornsilk;
+            padding: 10px 15px;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%; /* Радиус скругления */
+                border: 3px solid green; /* Параметры рамки */
+                box-shadow: 0 0 7px #666; /* Параметры тени */
+                align-self: center;
+            }
+            
+            h2 {
+                margin: 15px 0;
+            }
+            
+            p {
+                margin: auto 0 15px 0;
+            }
+            
+            button {
+                background-color: cadetblue;
+                border: none;
+                color: aliceblue;
+                padding: 10px 20px;
+                font-size: 16px;
             }
         }
-        
-        .img {
-            margin: 0 10px 0 0;
-            width: 100px;
-            flex-grow: 1;
-        }
-        
-        .text {
-            text-align: left;
-            font-style: italic;
-            width: 290px;
-            flex-grow: 1;
-        }
+    }
+}
+
+.test {
+    width: 25%;
+    margin: 20px auto;
+    border: solid 4px red;
+    
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* Радиус скругления */
+        border: 3px solid green; /* Параметры рамки */
+        box-shadow: 0 0 7px #666; /* Параметры тени */
     }
 }

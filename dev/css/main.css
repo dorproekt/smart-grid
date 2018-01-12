@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -156,36 +158,65 @@ section.profit {
   height: 100%;
   padding: 0 5px;
   overflow: hidden;
+}
+
+.wrap .items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.wrap .item {
-  border: 1px solid #fff;
+.wrap .items .item {
+  flex-basis: 200px;
+  background-color: cornsilk;
+  padding: 10px 15px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  background: #fff;
-  flex-basis: 400px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
-.wrap .item .img {
-  margin: 0 10px 0 0;
-  width: 100px;
-  flex-grow: 1;
+.wrap .items .item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* Радиус скругления */
+  border: 3px solid green;
+  /* Параметры рамки */
+  box-shadow: 0 0 7px #666;
+  /* Параметры тени */
+  align-self: center;
 }
 
-.wrap .item .text {
-  text-align: left;
-  font-style: italic;
-  width: 290px;
-  flex-grow: 1;
+.wrap .items .item h2 {
+  margin: 15px 0;
 }
 
-@media screen and (max-width: 813px) {
-  .wrap .item:nth-child(even) {
-    flex-direction: row-reverse;
-  }
+.wrap .items .item p {
+  margin: auto 0 15px 0;
+}
+
+.wrap .items .item button {
+  background-color: cadetblue;
+  border: none;
+  color: aliceblue;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.test {
+  width: 25%;
+  margin: 20px auto;
+  border: solid 4px red;
+}
+
+.test img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* Радиус скругления */
+  border: 3px solid green;
+  /* Параметры рамки */
+  box-shadow: 0 0 7px #666;
+  /* Параметры тени */
 }
