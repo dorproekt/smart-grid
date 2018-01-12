@@ -1,77 +1,58 @@
-@import '../libs/reset-css/_reset';
+@import '_smart-grid';
+
+@include reset;
 
 body {
     font-family: Verdana, Arial;
+    background-color: orange;
+    color: #333;
+    font-size: 24px;
 }
 
-img {
-    max-width: 100%;
-}
-
-section.profit {
-	background: #232324;
-	padding: 15px 0;
-}
-
-.wrap{
-	max-width: 960px;
-	margin: 0 auto;
-	height: 100%;
-	padding: 0 5px;
-	overflow: hidden;
+.container {
+    @include wrapper();
+    background-color: aliceblue;
     
-    .items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        
-        .item {
-            flex-basis: 200px;
-            background-color: cornsilk;
-            padding: 10px 15px;
-            margin: 5px;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            
-            img {
-                width: 150px;
-                height: 150px;
-                border-radius: 50%; /* Радиус скругления */
-                border: 3px solid green; /* Параметры рамки */
-                box-shadow: 0 0 7px #666; /* Параметры тени */
-                align-self: center;
-            }
-            
-            h2 {
-                margin: 15px 0;
-            }
-            
-            p {
-                margin: auto 0 15px 0;
-            }
-            
-            button {
-                background-color: cadetblue;
-                border: none;
-                color: aliceblue;
-                padding: 10px 20px;
-                font-size: 16px;
-            }
+    .items{
+        @include row-flex();
+        /*@include md;
+        @include xs(justify-content, center);*/
+
+        .item{
+            background-color: beige;
+            @include col();
+            @include size(4);
+            @include size-md(6);
+            @include size-xs(8);
+            @include xs(font-size, 14px);
         }
     }
 }
 
-.test {
-    width: 25%;
-    margin: 20px auto;
-    border: solid 4px red;
-    
-    img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%; /* Радиус скругления */
-        border: 3px solid green; /* Параметры рамки */
-        box-shadow: 0 0 7px #666; /* Параметры тени */
-    }
+.row {
+    @include wrapper-full();
+    .items-new{
+        @include row-flex();
+
+        .item-new{
+            background-color:blue;
+            @include col();
+            @include size(4);
+            @include size-md(6);
+            @include size-xs(8);
+        }
+    }  
 }
+
+
+/*.items{
+    @include row-flex();
+    @include md(justify-content, center);
+
+    .item{
+        @include col();
+        @include size(3);
+        @include size-md(5);
+        @include size-xs(10);
+    }
+}*/
